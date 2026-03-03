@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To‑Do List · classic edition</title>
+    <!-- external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="todo-container">
+    <h1>📋 To-Do List</h1>
+
+    <!-- add task row -->
+    <div class="add-task-row">
+        <span>Enter new task</span>
+        <input type="text" id="newTaskInput" placeholder="e.g., Buy vegetables" autocomplete="off">
+        <button id="addTaskBtn">Add Task</button>
+    </div>
+
+    <!-- dynamic task list -->
+    <ul id="taskList"></ul>
+
+    <!-- small footer note (optional) -->
+    <div class="footer-note">
+        <i>✔ click checkbox → strike · ✎ edit via prompt · ✖ remove</i>
+    </div>
+</div>
+
+<!-- external JavaScript -->
+<script src="script.js"></script>
+</body>
+</html>

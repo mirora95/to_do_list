@@ -1,0 +1,185 @@
+/* overall page style – clean, slightly retro */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: #f2f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 30px 20px;
+}
+
+.todo-container {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 1px solid #d0d9e5;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    color: #1e2b3a;
+    border-bottom: 2px solid #cfddee;
+    padding-bottom: 8px;
+}
+
+/* add task row – exactly as figure */
+.add-task-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0 25px 0;
+    background: #f8faff;
+    padding: 12px 15px;
+    border-radius: 40px;
+    border: 1px solid #bdc9db;
+}
+
+.add-task-row span {
+    font-weight: 500;
+    color: #1e3a5f;
+    white-space: nowrap;
+}
+
+#newTaskInput {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid #a0b3cc;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+    background: white;
+    transition: 0.15s;
+}
+
+#newTaskInput:focus {
+    border-color: #2f6c9f;
+    box-shadow: 0 0 0 3px rgba(47,108,159,0.2);
+}
+
+#addTaskBtn {
+    background: #2b7a4b;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #1d5e38;
+    box-shadow: 0 2px 5px rgba(0,40,0,0.2);
+    transition: 0.1s ease;
+    white-space: nowrap;
+}
+
+#addTaskBtn:hover {
+    background: #1e6a3b;
+    transform: scale(1.02);
+}
+
+#addTaskBtn:active {
+    background: #155a2e;
+    box-shadow: none;
+}
+
+/* task list styling */
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 12px 18px;
+    margin: 8px 0;
+    border-radius: 50px;
+    border: 1px solid #dde3ec;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    transition: background 0.1s;
+}
+
+li:hover {
+    background: #f6f9ff;
+    border-color: #a7b8d1;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #2b7a4b;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #1f2c3c;
+    word-break: break-word;
+    padding: 0 4px;
+}
+
+/* completed tasks */
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #6f7c8f;
+    font-style: italic;
+}
+
+/* edit & remove buttons */
+button.edit, button.remove {
+    border: none;
+    background: transparent;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.1s;
+    border: 1px solid transparent;
+}
+
+button.edit {
+    color: #1f5090;
+    background: #e7f0fd;
+}
+
+button.edit:hover {
+    background: #d0e2fc;
+    border-color: #6d8fc6;
+}
+
+button.remove {
+    color: #a13d3d;
+    background: #ffeaea;
+}
+
+button.remove:hover {
+    background: #fad1d1;
+    border-color: #c97c7c;
+}
+
+/* optional footer */
+.footer-note {
+    margin-top: 25px;
+    font-size: 0.8rem;
+    color: #6c7a92;
+    text-align: center;
+    border-top: 1px dashed #b7c4d6;
+    padding-top: 12px;
+}
+
+.footer-note i {
+    font-style: normal;
+    background: #eef3fa;
+    padding: 2px 8px;
+    border-radius: 30px;
+}   
